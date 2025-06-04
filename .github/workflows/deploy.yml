@@ -1,6 +1,10 @@
 # .github/workflows/deploy.yml
 name: Build & Deploy Frontend to GitHub Pages
 
+# 明确给 GITHUB_TOKEN 写入权限
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -11,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 拉取代码
+      # 1. 拉取仓库
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. 设置 Node.js 环境
+      # 2. 设置 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,10 +32,10 @@ jobs:
           npm install
           npm run build
 
-      # 4. 将 build/ 目录下的静态文件推到 gh-pages 分支
+      # 4. 推送 build/ 到 gh-pages 分支
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动带有写权限
           publish_dir: ./frontend/build
           publish_branch: gh-pages
