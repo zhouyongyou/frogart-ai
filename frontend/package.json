@@ -1,6 +1,7 @@
 {
   "name": "frogart-ai-frontend",
   "version": "1.0.0",
+  "homepage": "https://zhouyongyou.github.io/frogart-ai",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.6.5",
