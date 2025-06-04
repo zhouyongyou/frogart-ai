@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frogart-ai/static/css/main.750771ff.css",
+    "main.js": "/frogart-ai/static/js/main.fa5c1bd3.js",
+    "index.html": "/frogart-ai/index.html",
+    "main.750771ff.css.map": "/frogart-ai/static/css/main.750771ff.css.map",
+    "main.fa5c1bd3.js.map": "/frogart-ai/static/js/main.fa5c1bd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.750771ff.css",
+    "static/js/main.fa5c1bd3.js"
+  ]
+}
